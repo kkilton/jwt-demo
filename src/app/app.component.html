@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    JWT Demo
+  </h1>
+</div>
+<ul>
+  <li *ngIf="!userName">
+    <h2><a [routerLink]="['/login']">Login</a></h2>
+  </li>
+  <li>
+    <h2><a [routerLink]="['/test']">Test</a></h2>
+  </li>
+  <li *ngIf="isAdmin">
+    <h2><a [routerLink]="['/admin']">Admin</a></h2>
+  </li>
+  <li *ngIf="userName">
+    <h2>Hi {{userName}}!<a [routerLink]="['/logout']">Logout</a></h2>
+  </li>
+</ul>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
